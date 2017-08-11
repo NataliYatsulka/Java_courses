@@ -1,20 +1,25 @@
 package com.example.helloworld;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
-/**
- * Created by nyatsulk on 8/11/17.
- */
 public class Reader {
-    int i;
-    int k;
+    int i, k;
+    String n1, n2;
 
     public void Scan(){
-        System.out.println("input first number");
-        Scanner scn = new Scanner(System.in);
-        i = scn.nextInt();
-        System.out.println("input scond number");
-        k = scn.nextInt();
+
+        n1 = JOptionPane.showInputDialog("input first numb");
+        n2 = JOptionPane.showInputDialog("input second numb");
+        i = Integer.parseInt(n1);
+        k = Integer.parseInt(n2);
+
+    }
+
+    public void Scan(int a, int b){
+
+        JOptionPane.showMessageDialog(null, "Now i = " + a);
+        JOptionPane.showMessageDialog(null, "Now k = " + b);
 
     }
 }

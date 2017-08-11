@@ -8,9 +8,8 @@ public class HelloWorld {
         Reader r = new Reader();
         r.Scan();
         r.i = count(r.i);
-        System.out.println("now i ="  + r.i);
         r.k = count(r.k);
-        System.out.println("now k ="  + r.k);
+        r.Scan(r.i, r.k);
 
 //        i  = count(i);
 //        k = count(k);
@@ -21,7 +20,6 @@ public class HelloWorld {
 
         private static int count(int i){
             i = i + 10;
-            //i++;
             return i;
         }
 
