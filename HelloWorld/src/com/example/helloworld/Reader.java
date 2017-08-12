@@ -1,25 +1,37 @@
 package com.example.helloworld;
 
-import java.util.Scanner;
-import javax.swing.JOptionPane;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
 
-public class Reader {
+public class Reader extends JFrame{
+    JButton b1, b2;
+    JLabel l1, l2, l3, l4;
+    JTextField t1, t2;
     int i, k;
-    String n1, n2;
+    String a, b;
 
-    public void Scan(){
 
-        n1 = JOptionPane.showInputDialog("input first numb");
-        n2 = JOptionPane.showInputDialog("input second numb");
-        i = Integer.parseInt(n1);
-        k = Integer.parseInt(n2);
+    public Reader(String s){
+        super(s);
+        setLayout(new FlowLayout());
+        b1 = new JButton("Delete");
+        b2 = new JButton("Calculate");
+        l1 = new JLabel("Put first numb");
+        l2 = new JLabel("Put second numb");
+        l3 = new JLabel("");
+        l4 = new JLabel("");
+        t1 = new JTextField(10);
+        t2 = new JTextField(10);
+        add(b1);
+        add(b2);
+        add(l1);
+        add(t1);
+        add(l2);
+        add(t2);
+        add(l3);
+        add(l4);
 
     }
 
-    public void Scan(int a, int b){
-
-        JOptionPane.showMessageDialog(null, "Now i = " + a);
-        JOptionPane.showMessageDialog(null, "Now k = " + b);
-
-    }
 }
