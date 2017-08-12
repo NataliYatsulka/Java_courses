@@ -38,21 +38,25 @@ public class Reader extends JFrame {
     public class eHandler implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             //ActionPerformed do everything what you do in this minute
-            if (e.getSource() == b2) {
-                int i = Integer.parseInt(t1.getText());
-                int k = Integer.parseInt(t2.getText());
-                i++;
-                k++;
-                a = "Now first num=" + i;
-                b = "Now second num=" + k;
-                l3.setText(a);
-                l4.setText(b);
-            }
-            if (e.getSource() == b1) {
-                t1.setText(null);
-                t2.setText(null);
-                l3.setText(null);
-                l4.setText(null);
+            try {
+                if (e.getSource() == b2) {
+                    int i = Integer.parseInt(t1.getText());
+                    int k = Integer.parseInt(t2.getText());
+                    i++;
+                    k++;
+                    a = "Now first num=" + i;
+                    b = "Now second num=" + k;
+                    l3.setText(a);
+                    l4.setText(b);
+                }
+                if (e.getSource() == b1) {
+                    t1.setText(null);
+                    t2.setText(null);
+                    l3.setText("");
+                    l4.setText("");
+                }
+            }catch (Exception ex){
+                JOptionPane.showMessageDialog(null, "put numb");
             }
         }
     }
