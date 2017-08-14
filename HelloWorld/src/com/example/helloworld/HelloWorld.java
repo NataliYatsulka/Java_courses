@@ -8,17 +8,17 @@ import javax.swing.*;
 public class HelloWorld {
 
     public static void main(String[] args) {
-        int[] mas = new int[5];
 
-        for (int i = 0; i < 5; i++) {
-            mas[i] = i;
-            System.out.println(mas[i]);
-//        int[] mas = {1, 5, 9, 0, 8};
-//
-//       for (int i = 0; i < 5; i++)
-//           System.out.println(mas[i]);
-//        for(int x = 0; x < 5; x++){
-//            System.out.println("Hello");
-        }
+//        int[][] mas = new int[3][3];
+        int[][] mas = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        for (int i = 0; i < mas.length; i++) {
+            for (int j = 0; j < mas.length; j++) {
+                System.out.print(mas[i][j] + " ");
+                try{
+                    Thread.sleep(1000);
+                }catch (Exception e){}
+            }
+            System.out.println();
+            }
     }
 }
