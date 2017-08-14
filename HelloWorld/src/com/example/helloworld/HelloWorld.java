@@ -8,13 +8,17 @@ import javax.swing.*;
 public class HelloWorld {
 
     public static void main(String[] args) {
-        Reader r = new Reader("Calculator");
-        r.setVisible(true);
-        r.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        r.setSize(250, 250);
-        r.setResizable(false);
-        r.setLocationRelativeTo(null);
+        int[] mas = new int[5];
+
+        for (int i = 0; i < 5; i++) {
+            mas[i] = i;
+            System.out.println(mas[i]);
+//        int[] mas = {1, 5, 9, 0, 8};
+//
+//       for (int i = 0; i < 5; i++)
+//           System.out.println(mas[i]);
+//        for(int x = 0; x < 5; x++){
+//            System.out.println("Hello");
+        }
     }
-
-
 }
