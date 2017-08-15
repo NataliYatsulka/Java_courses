@@ -1,24 +1,46 @@
 package com.example.helloworld;
 
 import javax.swing.*;
+import java.io.File;
+import java.util.Scanner;
 
 /**
  * Created by nyatsulk on 8/9/17.
  */
 public class HelloWorld {
+    static String[][] mas = new String[5][3];
+    static Scanner scn;
 
     public static void main(String[] args) {
+        openFile();
+        readFile();
+        out();
+    }
 
-//        int[][] mas = new int[3][3];
-        int[][] mas = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    private static void out() {
         for (int i = 0; i < mas.length; i++) {
-            for (int j = 0; j < mas.length; j++) {
+            for (int j = 0; j < mas[i].length; j++) {
                 System.out.print(mas[i][j] + " ");
-                try{
-                    Thread.sleep(1000);
-                }catch (Exception e){}
             }
             System.out.println();
+        }
+    }
+
+    private static void readFile() {
+        while (scn.hasNext()) {
+            for (int i = 0; i < mas.length; i++) {
+                for (int j = 0; j < mas[i].length; j++) {
+                    mas[i][j] = scn.next();
+                }
             }
+        }
+    }
+
+    private static void openFile(){
+        try {
+            scn = new Scanner(new File("res//1.txt"));
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "File not found");
+        }
     }
 }
